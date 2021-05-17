@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/testTypeFragment">
+
+    <fragment
+        android:id="@+id/testSelectFragment"
+        android:name="com.maden.testapp.view.TestSelectFragment"
+        android:label="fragment_test_select"
+        tools:layout="@layout/fragment_test_select" >
+        <action
+            android:id="@+id/action_testSelectFragment_to_takeTestFragment"
+            app:destination="@id/takeTestFragment" />
+        <argument
+            android:name="testName"
+            app:argType="string" />
+        <argument android:name="testCover"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeTestFragment"
+        android:name="com.maden.testapp.view.TakeTestFragment"
+        android:label="fragment_take_test"
+        tools:layout="@layout/fragment_take_test" >
+        <action
+            android:id="@+id/action_takeTestFragment_to_testSelectFragment"
+            app:destination="@id/testSelectFragment" />
+        <argument
+            android:name="testName"
+            app:argType="string" />
+        <argument
+            android:name="testType"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_takeTestFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testTypeFragment"
+        android:name="com.maden.testapp.view.AllTestTypeFragment"
+        android:label="fragment_test_type"
+        tools:layout="@layout/fragment_test_type" >
+        <action
+            android:id="@+id/action_testTypeFragment_to_testsListFragment"
+            app:destination="@id/testsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testsListFragment"
+        android:name="com.maden.testapp.view.AllTestsListFragment"
+        android:label="fragment_tests_list"
+        tools:layout="@layout/fragment_tests_list" >
+        <action
+            android:id="@+id/action_testsListFragment_to_testSelectFragment"
+            app:destination="@id/testSelectFragment" />
+        <argument
+            android:name="testListName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.maden.testapp.view.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="result"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_resultFragment_to_testTypeFragment"
+            app:destination="@id/testTypeFragment" />
+    </fragment>
+</navigation>

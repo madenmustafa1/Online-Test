@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AdminActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/confirmationRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="339dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/confirmationTextView"
+        android:layout_width="299dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:text="Onayınızı bekleyen testler"
+        android:gravity="center"
+        android:textColor="#BC1818"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
