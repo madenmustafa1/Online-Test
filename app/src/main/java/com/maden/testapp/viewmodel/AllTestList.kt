@@ -45,13 +45,3 @@ class AllTestList {
         }
     }
 }
-
-/*
-        var storage = Firebase.storage
-        var storageRef = storage.reference
-        var pathReference: StorageReference? = storageRef.child("İlişki.png")
-        pathReference?.downloadUrl?.addOnSuccessListener {
-            val downloadURL = it
-            println(it)
-        }
- */
