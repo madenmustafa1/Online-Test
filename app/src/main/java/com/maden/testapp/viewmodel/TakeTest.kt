@@ -25,19 +25,12 @@ class TakeTest(val view: View) {
         dbRefQuestions.whereEqualTo("testName", testName).get().addOnSuccessListener {
             for (document in it){
                 questionList = document["questions"] as List<String>
-                /*
-                var str = document["questions"].toString()
-                var arr = str.dropWhile { !it.isLetter() }
-                arr = arr.dropLastWhile { !it.isLetter() }
-                questionList = arr.split(",")
-                 */
+
+                       
                 view.testName.text = document["testName"].toString()
                 view.questionsText.text = questionList[questionNumber]
-                /*
-                var strA = document["answer_1"].toString()
-                var arrA = strA.dropWhile { !it.isLetter() }
-                arrA = arrA.dropLastWhile { !it.isLetter() }
-                 */
+
+                
                 answerList = document["answer_1"] as List<String>
 
                 view.aCheckBox.text = answerList[0]
